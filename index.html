@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Consultorio de cirugía general y laparoscópica del Dr. Darío Villavicencio. Atención personalizada, confianza y claridad en cada consulta." />
+  <meta name="theme-color" content="#16324F" />
+  <meta property="og:title" content="Dr. Darío Villavicencio | Cirugía general y laparoscópica" />
+  <meta property="og:description"
+    content="Atención profesional, segura y cercana para pacientes que buscan solución quirúrgica con claridad y confianza." />
+  <meta property="og:type" content="website" />
+  <title>Dr. Darío Villavicencio | Cirugía general y laparoscópica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles/tokens.css" />
+  <link rel="stylesheet" href="src/styles/styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-meta">
+        <span class="eyebrow">Consultorio médico</span>
+        <a href="#" data-contact="phone" data-phone-display>+52 56 2843 8214</a>
+      </div>
+      <div class="topbar-actions">
+        <a class="button button-secondary" href="#" target="_blank" rel="noopener" data-contact="whatsapp">WhatsApp</a>
+        <a class="button button-primary" href="#" data-contact="phone">Llamar ahora</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">DV</span>
+        <span>
+          <strong>Dr. Darío Villavicencio</strong>
+          <small>Cirugía General y Laparoscópica</small>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="nav-menu" class="nav-menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="inicio">
+    <section class="hero section-spacing">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-primary">Atención médica con criterio, claridad y confianza</p>
+          <h1>Cirugía general y laparoscópica.</h1>
+          <p class="lead">Si buscas una consulta clara, respetuosa y enfocada en tu bienestar, aquí podrás conocer el
+            enfoque del consultorio, preguntar por servicios y comunicarte directamente con el Dr. Darío Villavicencio.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#" target="_blank" rel="noopener"
+              data-contact="whatsapp">WhatsApp</a>
+            <a class="button button-secondary" href="#" data-contact="phone">Llamar ahora</a>
+          </div>
+          <ul class="hero-points" aria-label="Principales ventajas del consultorio">
+            <li>Consulta con trato personalizado</li>
+            <li>Información clara antes del procedimiento</li>
+            <li>Atención enfocada en confianza y seguridad</li>
+          </ul>
+        </div>
+
+        <div class="hero-card" aria-label="Tarjeta de presentación del médico">
+          <div class="doctor-visual" role="img" aria-label="Fotografía de stock de un profesional de salud; no representa al Dr. Villavicencio">
+            <div class="doctor-badge">Foto de stock · ilustrativa</div>
+          </div>
+          <div class="doctor-info">
+            <p class="label">Especialista</p>
+            <h2>Dr. Darío Villavicencio</h2>
+            <p>Cirugía general y laparoscópica</p>
+            <ul>
+              <li>Evaluación clínica personalizada</li>
+              <li>Orientación sobre diagnóstico y tratamiento</li>
+              <li>Atención profesional y cercana</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section-spacing services-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-primary">Servicios</p>
+          <h2>Un proceso claro, desde la valoración hasta el seguimiento.</h2>
+          <p>La definición de cada tratamiento debe realizarse con evaluación médica personalizada. Este consultorio
+            orienta a cada paciente según su historia clínica, síntomas y necesidad individual de atención.</p>
+        </div>
+        <div id="services-grid" class="cards-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section-spacing detail-sections">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow eyebrow-primary">Enfermedades atendidas</p>
+          <h2>Valoración responsable y cercana a cada caso.</h2>
+          <p class="section-intro">Cada síntoma requiere una evaluación individual. La valoración ayuda a decidir los siguientes pasos.</p>
+          <div id="disease-grid" class="mini-grid" aria-live="polite"></div>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow-primary">Procedimientos relacionados</p>
+          <h2>Información clara sobre la intervención y su seguimiento.</h2>
+          <div id="procedural-grid" class="mini-grid" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-spacing myth-section midnight-section">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="eyebrow eyebrow-primary">Mitos y realidades</p>
+          <h2>Información útil para tomar decisiones con calma.</h2>
+        </div>
+        <div id="myth-grid" class="myth-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section-spacing about-wrap">
+      <div class="container about-grid">
+        <div class="first-visit-card">
+          <p class="eyebrow eyebrow-primary">Primera consulta</p>
+          <h3>Qué puedes esperar</h3>
+          <ol>
+            <li><span>01</span> Conversar sobre el motivo de consulta y antecedentes relevantes.</li>
+            <li><span>02</span> Recibir una valoración y resolver tus dudas con claridad.</li>
+            <li><span>03</span> Conocer los siguientes pasos; estudios o tratamiento se definen según cada caso.</li>
+          </ol>
+          <p class="first-visit-note">Trae los estudios previos y una lista de medicamentos, si cuentas con ellos.</p>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow eyebrow-primary">Sobre el consultorio</p>
+          <h2>Atención cercana, escucha y orientación clara.</h2>
+          <p>El Dr. Darío Villavicencio brinda atención en cirugía general y laparoscópica. En consulta se revisa cada
+            situación de forma individual y se explican las opciones de valoración y los pasos a seguir.</p>
+          <p>La indicación de estudios o tratamiento depende de la evaluación médica. No todos los padecimientos
+            requieren cirugía.</p>
+          <ul class="about-values">
+            <li>Valoración individual</li>
+            <li>Explicaciones claras</li>
+            <li>Seguimiento según cada caso</li>
+          </ul>
+          <div class="about-contact">
+            <strong>¿Tienes dudas antes de agendar?</strong>
+            <a class="text-link" href="#" data-contact="whatsapp" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cobertura" class="section-spacing coverage-section">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="eyebrow eyebrow-primary">Cobertura y aseguradoras</p>
+          <h2>Revisa cobertura, condiciones y alternativas antes de agendar.</h2>
+          <p>Los requisitos dependen de la póliza, el plan y el procedimiento. Te orientamos sobre qué conviene confirmar antes de tu cita.</p>
+        </div>
+        <div id="insurance-list" class="insurance-list" aria-live="polite"></div>
+        <div class="coverage-guide">
+          <article>
+            <span class="coverage-icon" aria-hidden="true">✓</span>
+            <h3>Si tienes seguro</h3>
+            <p>Pregunta si tu plan cubre la consulta o el procedimiento y qué autorización requiere.</p>
+          </article>
+          <article>
+            <span class="coverage-icon" aria-hidden="true">$</span>
+            <h3>Financiamiento</h3>
+            <p>Consulta las opciones disponibles en el perfil de MEND. Las condiciones dependen del proveedor.</p>
+            <a class="text-link" href="#" target="_blank" rel="noopener" data-contact="financing">Conocer opciones de MEND</a>
+          </article>
+        </div>
+        <p class="coverage-note">La cobertura y cualquier financiamiento están sujetos a las condiciones particulares y a la aprobación correspondiente.</p>
+      </div>
+    </section>
+
+    <section class="section-spacing reviews-section midnight-section">
+      <div class="container review-layout">
+        <div id="review-panel" class="review-panel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section-spacing faq-section">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="eyebrow eyebrow-primary">Preguntas frecuentes</p>
+          <h2>Respuestas claras para tomar decisiones informadas.</h2>
+        </div>
+        <div id="faq-list" class="faq-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section-spacing cta-section">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow eyebrow-primary">Contacto directo</p>
+          <h2>Solicita información o agenda tu consulta.</h2>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-primary"
+            href="#"
+            target="_blank" rel="noopener" data-contact="whatsapp">WhatsApp</a>
+          <a class="button button-secondary" href="#" data-contact="phone">Llamar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="#inicio" aria-label="Volver al inicio">
+          <span class="brand-mark">DV</span>
+          <span>
+            <strong>Dr. Darío Villavicencio</strong>
+            <small>Cirugía General y Laparoscópica</small>
+          </span>
+        </a>
+        <p>Consultorio médico con enfoque en la confianza, la claridad y la atención centrada en el paciente.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="footer-list">
+          <li><a href="#" data-contact="phone" data-phone-display><span class="footer-icon" aria-hidden="true">☎</span>+52 56 2843 8214</a></li>
+          <li><a href="#" data-contact="email"><span class="footer-icon" aria-hidden="true">✉</span>j.darivillalop@gmail.com</a></li>
+          <li><a href="#" data-contact="whatsapp" target="_blank" rel="noopener"><span class="footer-icon" aria-hidden="true">↗</span>Consultar ubicación y horarios</a></li>
+          <li><a href="#" target="_blank" rel="noopener" data-contact="instagram">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Información</h3>
+        <ul class="footer-list">
+          <li><a href="#" target="_blank" rel="noopener" data-contact="financing">Perfil de financiamiento</a></li>
+          <li><a href="#" target="_blank" rel="noopener" data-contact="reviews">Opiniones en Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-social-row">
+      <span class="footer-social-title">Redes y contacto</span>
+      <div id="footer-socials" class="footer-socials" aria-label="Redes sociales y contacto"></div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Dr. Darío Villavicencio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <aside class="mobile-contact-bar" aria-label="Contacto rápido">
+    <a class="button button-primary" href="#" target="_blank" rel="noopener" data-contact="whatsapp">WhatsApp</a>
+    <a class="button button-secondary" href="#" data-contact="phone">Llamar</a>
+  </aside>
+  <aside class="desktop-contact-bubbles" aria-label="Contacto rápido">
+    <a class="contact-bubble contact-bubble-whatsapp" href="#" target="_blank" rel="noopener" data-contact="whatsapp" aria-label="Contactar por WhatsApp">
+      <span aria-hidden="true">W</span><small>WhatsApp</small>
+    </a>
+    <a class="contact-bubble contact-bubble-phone" href="#" data-contact="phone" aria-label="Llamar al consultorio">
+      <span aria-hidden="true">☎</span><small>Llamar</small>
+    </a>
+  </aside>
+
+  <script type="module" src="src/scripts/main.js"></script>
+</body>
+
+</html>
