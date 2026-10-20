@@ -105,20 +105,46 @@ const renderMythReality = () => {
     .filter((item) => item.confirmed)
     .map(
       (item) => `
-        <article class="myth-card">
-          <div class="myth-copy myth-copy-false">
-            <span class="myth-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></span>
-            <div><div class="myth-label">Mito</div><p>${item.title}</p></div>
+        <details class="myth-card" open>
+          <summary class="myth-summary">
+            <span class="myth-summary-label">Mito y realidad</span>
+            <span class="myth-summary-title">${item.title}</span>
+            <span class="myth-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="myth-content">
+            <div class="myth-copy myth-copy-false">
+              <span class="myth-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></span>
+              <div><div class="myth-label">Mito</div><p>${item.title}</p></div>
+            </div>
+            <div class="myth-divider"></div>
+            <div class="myth-copy myth-copy-true">
+              <span class="myth-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+              <div><div class="myth-label myth-label-accent">Realidad</div><p>${item.reality}</p></div>
+            </div>
           </div>
-          <div class="myth-divider"></div>
-          <div class="myth-copy myth-copy-true">
-            <span class="myth-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
-            <div><div class="myth-label myth-label-accent">Realidad</div><p>${item.reality}</p></div>
-          </div>
-        </article>
+        </details>
       `
     )
     .join('');
+};
+
+const bindResponsiveMythDetails = () => {
+  const grid = document.querySelector('#myth-grid');
+  if (!grid) return;
+
+  const mobileQuery = window.matchMedia('(max-width: 768px)');
+  const syncDetails = () => {
+    grid.querySelectorAll('.myth-card').forEach((card) => {
+      card.open = !mobileQuery.matches;
+    });
+  };
+
+  syncDetails();
+  if (typeof mobileQuery.addEventListener === 'function') {
+    mobileQuery.addEventListener('change', syncDetails);
+  } else {
+    mobileQuery.addListener(syncDetails);
+  }
 };
 
 const renderInsurance = () => {
@@ -259,6 +285,7 @@ const init = () => {
   renderDiseaseFocus();
   renderProceduralFocus();
   renderMythReality();
+  bindResponsiveMythDetails();
   renderInsurance();
   renderFaq();
   renderReviews();

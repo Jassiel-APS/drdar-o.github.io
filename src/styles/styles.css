@@ -1675,6 +1675,12 @@ select {
   font-size: 0.88rem;
 }
 
+@media (min-width: 769px) {
+  .myth-summary {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .journey-step:not(:last-child)::after {
     right: -1rem;
@@ -1727,5 +1733,386 @@ select {
 
   .footer-social-link {
     padding: 0.5rem 0.7rem;
+  }
+}
+
+/* Mobile-first layout refinements */
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .section-spacing {
+    padding-block: 1.5rem;
+  }
+
+  .section-heading h2,
+  .about-copy h2,
+  .cta-box h2,
+  .detail-sections h2 {
+    max-width: 100%;
+    font-size: min(1.8rem, 7.2vw);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading > p:not(.eyebrow),
+  .section-intro,
+  .coverage-guide p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  /* Keep the mobile reading sequence independent from the desktop grid. */
+  .hero.section-spacing {
+    padding-block: 1.5rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy > .eyebrow {
+    display: none;
+  }
+
+  .hero-copy h1 {
+    order: 1;
+    max-width: 16ch;
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 2.65rem);
+    line-height: 1.08;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .hero-copy .lead {
+    order: 2;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-copy .hero-actions {
+    order: 3;
+    margin: 0;
+    flex-direction: row;
+    gap: 0.65rem;
+  }
+
+  .hero-copy .hero-actions .button {
+    width: auto;
+    min-height: 48px;
+    flex: 1 1 0;
+    padding-inline: 0.75rem;
+  }
+
+  .hero-card {
+    order: 4;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 1rem;
+  }
+
+  .doctor-visual {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    background-position: center 30%;
+  }
+
+  .doctor-badge {
+    left: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .doctor-info {
+    padding: 1rem;
+  }
+
+  .doctor-info h2 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .doctor-info ul {
+    margin-top: 0.75rem;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .hero-copy .hero-points {
+    order: 5;
+    margin: 0.15rem 0 0;
+    gap: 0.45rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  /* Option A (default): native horizontal touch carousel for the four steps. */
+  .services-section .cards-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min(86%, 22rem);
+    grid-template-columns: none;
+    gap: 0.85rem;
+    margin-inline: -0.25rem;
+    padding: 0.25rem 0.25rem 1rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: 0.25rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    touch-action: pan-x pan-y;
+  }
+
+  .services-section .journey-step {
+    min-height: 0;
+    padding: 1rem;
+    scroll-snap-align: start;
+  }
+
+  .services-section .journey-step:not(:last-child)::after {
+    display: none;
+  }
+
+  .services-section .journey-step-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .services-section .journey-step h3 {
+    margin-block: 0.7rem 0.35rem;
+  }
+
+  .services-section .journey-step p {
+    margin-block: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Option B: add class "is-timeline" to .services-section to use a compact list. */
+  .services-section.is-timeline .cards-grid {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: visible;
+    padding: 0;
+    scroll-snap-type: none;
+  }
+
+  .services-section.is-timeline .journey-step {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .services-section.is-timeline .journey-step:not(:last-child)::after {
+    top: auto;
+    right: 1.1rem;
+    bottom: -0.8rem;
+    display: grid;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-width: 2px;
+    content: "\2193";
+    font-size: 0.9rem;
+  }
+
+  .services-section.is-timeline .journey-step-icon {
+    display: none;
+  }
+
+  .services-section.is-timeline .journey-step h3 {
+    margin: 0.4rem 0;
+    font-size: 1rem;
+  }
+
+  .services-section.is-timeline .journey-step p,
+  .services-section.is-timeline .journey-step .detail {
+    font-size: 0.9rem;
+  }
+
+  /* The three colored information cards become a touch-friendly accordion. */
+  .myth-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .myth-card {
+    padding: 0;
+    border-radius: 0.95rem;
+  }
+
+  .myth-summary {
+    display: grid;
+    min-height: 4.25rem;
+    grid-template-columns: minmax(0, 1fr) 2rem;
+    align-items: center;
+    gap: 0.2rem 0.75rem;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .myth-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .myth-summary-label {
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .myth-summary-title {
+    color: var(--color-primary);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .myth-summary-icon {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: var(--color-primary);
+  }
+
+  .myth-summary-icon::before,
+  .myth-summary-icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.65rem;
+    height: 2px;
+    background: currentColor;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .myth-summary-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .myth-card[open] .myth-summary-icon::after {
+    transform: translate(-50%, -50%);
+  }
+
+  .myth-content {
+    padding: 0 1rem 1rem;
+  }
+
+  .myth-content .myth-copy-false,
+  .myth-content .myth-divider {
+    display: none;
+  }
+
+  .myth-content .myth-copy {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .myth-content .myth-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .myth-content .myth-copy p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Stack the payment choices while keeping each icon aligned with its copy. */
+  .coverage-guide {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+    margin-top: 0.8rem;
+  }
+
+  .coverage-guide article {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.35rem 0.75rem;
+    padding: 0.9rem;
+  }
+
+  .coverage-icon {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 2.25rem;
+    height: 2.25rem;
+    align-self: start;
+  }
+
+  .coverage-guide h3 {
+    grid-column: 2;
+    margin: 0.15rem 0 0;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .coverage-guide p,
+  .coverage-guide .text-link {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .coverage-guide .text-link {
+    margin-top: 0.2rem;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .insurance-list {
+    gap: 0.65rem;
+  }
+
+  .insurance-item {
+    min-height: 0;
+    padding: 0.9rem 1rem;
+  }
+
+  .coverage-note {
+    margin-top: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-copy .hero-actions .button {
+    flex-basis: auto;
+  }
+
+  .doctor-info {
+    padding: 0.85rem;
+  }
+
+  .myth-summary {
+    padding-inline: 0.8rem;
+  }
+
+  .myth-content {
+    padding-inline: 0.8rem;
   }
 }

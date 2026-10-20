@@ -7,13 +7,13 @@ export const medicalServices = [
   },
   {
     title: 'Evaluación y opciones',
-    description: 'Se revisa tu caso y se explican las alternativas que podrían corresponder.',
+    description: 'Se revisa tu caso y se explican las opciones más adecuadas para ti.',
     detail: 'Los estudios se indican solo cuando son necesarios para tu evaluación.',
     cta: 'Resolver una duda'
   },
   {
     title: 'Plan individual',
-    description: 'Si se considera una intervención, se explican el procedimiento y sus cuidados.',
+    description: 'Si se considera una intervención, se explica el procedimiento, riesgos, beneficios, cuidados pre y postoperatorios.',
     detail: 'La cirugía no es necesaria para todos los padecimientos.',
     cta: 'Consultar opciones'
   },
@@ -28,7 +28,7 @@ export const medicalServices = [
 export const diseaseFocus = [
   {
     title: 'Hernias abdominales',
-    summary: 'Evaluación para dolor, molestia o protrusión en la pared abdominal.',
+    summary: 'Evaluación para dolor, protrusión o abultamientos en la pared abdominal.',
     note: 'Se requiere valoración médica para definir si la conducta es observación, tratamiento conservador o intervención.',
     confirmed: true,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80',
