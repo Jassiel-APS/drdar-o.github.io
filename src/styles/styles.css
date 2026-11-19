@@ -39,6 +39,23 @@
   color: var(--color-accent);
 }
 
+.mini-card .disease-cta {
+  justify-content: center;
+  width: fit-content;
+  margin-top: auto;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  text-align: center;
+}
+
+.mini-card .disease-cta:hover,
+.mini-card .disease-cta:focus-visible {
+  background: var(--color-primary-deep);
+}
+
 .about-values {
   display: flex;
   flex-wrap: wrap;

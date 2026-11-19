@@ -63,13 +63,13 @@ const renderDiseaseFocus = () => {
     .map(
       (item) => `
         <article class="mini-card">
-          <img class="disease-image" src="${item.image}" alt="${item.imageAlt}" loading="lazy">
+          ${item.image ? `<img class="disease-image" src="${item.image}" alt="${item.imageAlt}" loading="lazy">` : ''}
           <div class="mini-card-head">
             <h3>${item.title}</h3>
           </div>
           <p>${item.summary}</p>
           <small>${item.note}</small>
-          <a class="text-link" href="${whatsappUrl(`Hola Dr. Darío, quisiera información sobre ${item.title}.`)}" target="_blank" rel="noopener">${item.cta}</a>
+          <a class="disease-cta" href="${whatsappUrl(`Hola Dr. Darío, quiero más información sobre ${item.title} y su tratamiento.`)}" target="_blank" rel="noopener">${item.cta}</a>
         </article>
       `
     )

@@ -27,8 +27,8 @@ export const medicalServices = [
 
 export const diseaseFocus = [
   {
-    title: 'Hernias abdominales',
-    summary: 'Evaluación para dolor, protrusión o abultamientos en la pared abdominal.',
+    title: 'Hernia inguinal',
+    summary: 'Valoración de molestias o abultamientos en la región de la ingle.',
     note: 'Se requiere valoración médica para definir si la conducta es observación, tratamiento conservador o intervención.',
     confirmed: true,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80',
@@ -36,11 +36,18 @@ export const diseaseFocus = [
     cta: 'Solicitar evaluación'
   },
   {
-    title: 'Colelitiasis',
-    summary: 'Consulta para síntomas relacionados con cálculos biliares y dolor abdominal.',
-    note: 'La conducta depende de la sintomatología, la evolución y la evaluación clínica.',
-    confirmed: false,
-    cta: 'Confirmar atención'
+    title: 'Hernia ventral e incisional',
+    summary: 'Evaluación de abultamientos en la pared abdominal, incluso en zonas de cicatrices quirúrgicas.',
+    note: 'La valoración médica permite revisar los síntomas y las opciones de manejo para cada caso.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
+  },
+  {
+    title: 'Colecistitis (piedras en la vesícula)',
+    summary: 'Valoración de síntomas relacionados con cálculos o inflamación de la vesícula biliar.',
+    note: 'La evaluación clínica determina los siguientes pasos y las opciones de tratamiento.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
   },
   {
     title: 'Dolor abdominal recurrente',
@@ -52,11 +59,46 @@ export const diseaseFocus = [
     cta: 'Verificar caso'
   },
   {
-    title: 'Patología de la pared abdominal',
-    summary: 'Atención para condiciones que afectan la pared o la zona abdominal.',
-    note: 'La necesidad de intervención debe confirmarse con la historia clínica y la exploración.',
-    confirmed: false,
-    cta: 'Solicitar información'
+    title: 'Diástasis de rectos abdominales',
+    summary: 'Valoración de la separación de los músculos rectos del abdomen y molestias asociadas.',
+    note: 'El manejo depende de la evaluación médica y de las necesidades de cada paciente.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
+  },
+  {
+    title: 'Apendicitis aguda',
+    summary: 'Valoración de dolor abdominal y otros síntomas que podrían relacionarse con apendicitis.',
+    note: 'Ante dolor intenso o síntomas que empeoran, busca atención médica urgente.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
+  },
+  {
+    title: 'Hernia hiatal y reflujo gastroesofágico',
+    summary: 'Evaluación de síntomas digestivos como reflujo y acidez para orientar el diagnóstico.',
+    note: 'La valoración médica ayuda a determinar el tratamiento adecuado para cada caso.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
+  },
+  {
+    title: 'Nódulos tiroideos',
+    summary: 'Valoración de nódulos o aumentos de volumen en la región de la tiroides.',
+    note: 'La evaluación y los estudios necesarios se definen de acuerdo con cada caso.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
+  },
+  {
+    title: 'Lipomas',
+    summary: 'Evaluación de bultos bajo la piel que podrían corresponder a lipomas.',
+    note: 'Es necesaria una valoración para confirmar el diagnóstico y revisar opciones de manejo.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
+  },
+  {
+    title: 'Quistes epidérmicos',
+    summary: 'Valoración de quistes o bultos en la piel y el tejido subcutáneo.',
+    note: 'La evaluación médica permite confirmar de qué se trata y orientar el manejo.',
+    confirmed: true,
+    cta: 'Solicitar evaluación'
   }
 ];
 
@@ -138,6 +180,6 @@ export const faqItems = [
   },
   {
     question: '¿El consultorio acepta seguros o financiamiento?',
-    answer: 'La cobertura depende de las condiciones de cada póliza y de la autorización correspondiente. Puedes consultar opciones de financiamiento en el perfil de MEND.'
+    answer: 'Puedes consultar si tu póliza privada de gastos médicos mayores aplica; la cobertura depende de sus condiciones y autorizaciones. También puedes revisar las opciones de financiamiento en el perfil de MEND.'
   }
 ];
