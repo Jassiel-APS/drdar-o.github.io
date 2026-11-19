@@ -31,8 +31,6 @@ export const diseaseFocus = [
     summary: 'Valoración de molestias o abultamientos en la región de la ingle.',
     note: 'Se requiere valoración médica para definir si la conducta es observación, tratamiento conservador o intervención.',
     confirmed: true,
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80',
-    imageAlt: 'Profesional de salud durante una consulta médica',
     cta: 'Solicitar evaluación'
   },
   {
@@ -54,8 +52,6 @@ export const diseaseFocus = [
     summary: 'Valoración de molestias persistentes, recurrentes o con evolución no clara.',
     note: 'Es clave distinguir causas funcionales, inflamatorias o quirúrgicas con una evaluación integral.',
     confirmed: true,
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
-    imageAlt: 'Atención y valoración médica en consultorio',
     cta: 'Verificar caso'
   },
   {
